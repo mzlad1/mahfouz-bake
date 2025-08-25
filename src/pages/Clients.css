@@ -1,0 +1,234 @@
+.clients-hero {
+  background: linear-gradient(
+    135deg,
+    var(--lavender-floral),
+    var(--lavender-floral-2)
+  );
+  color: var(--white);
+  text-align: center;
+}
+
+.clients-hero .clients-section-title {
+  color: var(--white);
+}
+
+.clients-hero .clients-section-subtitle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Target Audiences */
+.clients-audiences-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.clients-audience-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.clients-audience-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.clients-audience-card h3 {
+  color: var(--fawn);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.clients-audience-description {
+  color: var(--gray);
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.clients-benefits-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.clients-benefit-tag {
+  background: var(--fawn);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Trust Factors */
+.clients-trust-factors {
+  background: var(--light-gray);
+}
+
+.clients-trust-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.clients-trust-card {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.clients-trust-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.clients-trust-card h3 {
+  color: var(--fawn);
+  font-size: 1.4rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.clients-trust-card p {
+  color: var(--gray);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Partnership Benefits */
+.clients-benefits-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.clients-benefits-text h3 {
+  color: var(--fawn);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+}
+
+.clients-benefits-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.clients-benefits-text li {
+  padding: 12px 0;
+  color: var(--gray);
+  border-bottom: 1px solid rgba(240, 180, 125, 0.2);
+  line-height: 1.6;
+  position: relative;
+  padding-left: 30px;
+}
+
+.clients-benefits-text li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--fawn);
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.clients-benefits-text li:last-child {
+  border-bottom: none;
+}
+
+.clients-benefits-text strong {
+  color: var(--dark-purple);
+}
+
+.clients-benefits-image img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(59, 38, 72, 0.15);
+}
+
+/* Call to Action */
+.clients-cta-section {
+  background: linear-gradient(135deg, var(--dark-purple), var(--eminence));
+  color: var(--white);
+  text-align: center;
+}
+
+.clients-cta-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.clients-cta-content p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  opacity: 0.95;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.clients-cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .clients-audiences-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-trust-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .clients-benefits-content {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .clients-benefits-image img {
+    height: 300px;
+  }
+
+  .clients-cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .clients-audience-card,
+  .clients-trust-card {
+    padding: 25px 15px;
+  }
+
+  .clients-benefits-text h3 {
+    font-size: 1.6rem;
+  }
+
+  .clients-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .clients-cta-content p {
+    font-size: 1.1rem;
+  }
+}
