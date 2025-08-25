@@ -98,10 +98,7 @@ const Home = () => {
           </div>
           <div className="home-hero-image home-floating-element">
             <div className="home-image-wrapper">
-              <img
-                src="/public/images/heroImage.jpg"
-                alt="Freshly baked cookies"
-              />
+              <img src="/images/heroImage.jpg" alt="Freshly baked cookies" />
               <div className="home-image-overlay"></div>
             </div>
           </div>
