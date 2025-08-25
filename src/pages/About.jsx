@@ -91,10 +91,7 @@ const About = () => {
               </p>
             </div>
             <div className="about-story-image">
-              <img
-                src="/public/images/aboutus.jpg"
-                alt="Freshly baked cookies"
-              />
+              <img src="/images/aboutus.jpg" alt="Freshly baked cookies" />
             </div>
           </div>
         </div>
