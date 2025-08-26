@@ -790,18 +790,53 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .home-hero {
+    min-height: 90vh;
+    padding: 40px 0;
+  }
+
   .home-hero .home-container {
     grid-template-columns: 1fr;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
+    padding: 0 20px;
   }
 
   .home-hero-image {
     order: -1;
+    margin-bottom: 20px;
   }
 
   .home-image-wrapper {
-    max-width: 400px;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  .home-hero-title {
+    font-size: clamp(2rem, 6vw, 3rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+  }
+
+  .home-hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .home-hero-buttons {
+    justify-content: center;
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home-btn {
+    width: 100%;
+    max-width: 280px;
+    padding: 14px 24px;
+    font-size: 0.95rem;
   }
 
   .home-mission-vision-grid {
@@ -810,11 +845,7 @@ body {
   }
 
   .home-card {
-    padding: 30px;
-  }
-
-  .home-hero-buttons {
-    justify-content: center;
+    padding: 30px 20px;
   }
 
   .home-social-links {
@@ -831,19 +862,45 @@ body {
 }
 
 @media (max-width: 480px) {
+  .home-hero {
+    min-height: 85vh;
+    padding: 30px 0;
+  }
+
   .home-container {
     padding: 0 15px;
   }
 
+  .home-hero .home-container {
+    gap: 25px;
+    padding: 0 15px;
+  }
+
+  .home-hero-title {
+    font-size: clamp(1.8rem, 7vw, 2.5rem);
+    margin-bottom: 18px;
+  }
+
+  .home-hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+  }
+
+  .home-image-wrapper {
+    max-width: 240px;
+  }
+
   .home-btn {
-    padding: 14px 24px;
+    padding: 16px 20px;
     font-size: 0.9rem;
-    min-width: 140px;
+    min-width: 200px;
+    max-width: 100%;
   }
 
   .home-hero-buttons {
-    flex-direction: column;
-    align-items: center;
+    gap: 12px;
+    width: 100%;
   }
 
   .home-social-link {
@@ -854,6 +911,32 @@ body {
   .home-social-icon {
     width: 25px;
     height: 25px;
+  }
+}
+
+@media (max-width: 360px) {
+  .home-hero {
+    min-height: 80vh;
+    padding: 25px 0;
+  }
+
+  .home-hero-title {
+    font-size: clamp(1.6rem, 8vw, 2.2rem);
+  }
+
+  .home-hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+  }
+
+  .home-image-wrapper {
+    max-width: 200px;
+  }
+
+  .home-btn {
+    padding: 14px 18px;
+    font-size: 0.85rem;
+    min-width: 180px;
   }
 }
 

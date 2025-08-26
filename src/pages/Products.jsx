@@ -7,8 +7,7 @@ const Products = () => {
 
   const categories = [
     { id: "all", name: "All Products" },
-    { id: "frozen-dough", name: "Frozen Cookie Dough" },
-    { id: "mini-cookies", name: "Mini Cookies" },
+    { id: "cookies", name: "Cookies" },
     { id: "sugar-free-cookies", name: "Sugar-Free Cookies" },
     { id: "sugar-free-muffins", name: "Sugar-Free Muffins" },
     { id: "fudge-brownies", name: "Fudge Brownies" },
@@ -41,93 +40,113 @@ const Products = () => {
   const products = [
     {
       id: 1,
-      category: "frozen-dough",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
-      name: "Classic Chocolate Chip Dough",
-      tags: ["Premium", "Frozen", "Ready-to-Bake"],
+      name: "Red Velvet Cookie",
+      tags: ["Premium", "Red Velvet", "Classic"],
       description:
-        "Premium frozen cookie dough with real chocolate chips. Perfect for consistent baking results.",
+        "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
     {
       id: 2,
-      category: "frozen-dough",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
-      name: "Oatmeal Raisin Dough",
-      tags: ["Premium", "Frozen", "Healthy"],
+      name: "Double Cookie",
+      tags: ["Premium", "Double", "Chocolate"],
       description:
-        "Wholesome oatmeal cookie dough with plump raisins and natural sweetness.",
+        "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
     {
       id: 3,
-      category: "mini-cookies",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-      name: "Assorted Mini Cookies",
-      tags: ["Mini", "Assorted", "Fresh"],
+      name: "Classic Cookie",
+      tags: ["Classic", "Traditional", "Timeless"],
       description:
-        "Perfect bite-sized cookies in various flavors. Ideal for events and catering.",
+        "The perfect classic cookie with a golden brown exterior and soft, chewy center.",
     },
     {
       id: 4,
-      category: "sugar-free-cookies",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
-      name: "Sugar-Free Chocolate Chip",
-      tags: ["Sugar-Free", "Healthy", "Diabetic-Friendly"],
+      name: "Oats Cookie",
+      tags: ["Oats", "Healthy", "Nutritious"],
       description:
-        "Delicious chocolate chip cookies without added sugar. Sweetened naturally.",
+        "Wholesome oatmeal cookies with a hearty texture and natural sweetness.",
     },
     {
       id: 5,
-      category: "sugar-free-cookies",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
-      name: "Sugar-Free Oatmeal",
-      tags: ["Sugar-Free", "Healthy", "Fiber-Rich"],
+      name: "Sprinkles Cookie",
+      tags: ["Fun", "Colorful", "Party"],
       description:
-        "Nutritious oatmeal cookies with natural sweetness and no artificial sweeteners.",
+        "Festive cookies loaded with colorful sprinkles, perfect for celebrations and parties.",
     },
     {
       id: 6,
-      category: "sugar-free-muffins",
+      category: "cookies",
       image:
         "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-      name: "Sugar-Free Blueberry Muffins",
-      tags: ["Sugar-Free", "Healthy", "Fruit"],
+      name: "Reeses Cookie",
+      tags: ["Peanut Butter", "Chocolate", "Reeses"],
       description:
-        "Moist blueberry muffins made with fresh berries and natural sweeteners.",
+        "Irresistible cookies featuring the perfect combination of peanut butter and chocolate.",
     },
     {
       id: 7,
-      category: "sugar-free-muffins",
+      category: "sugar-free-cookies",
       image:
         "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
-      name: "Sugar-Free Chocolate Muffins",
-      tags: ["Sugar-Free", "Healthy", "Chocolate"],
+      name: "Sugar-Free Cranberry Cookie",
+      tags: ["Sugar-Free", "Cranberry", "Healthy"],
       description:
-        "Rich chocolate muffins without the sugar. Perfect for health-conscious chocolate lovers.",
+        "Delicious cranberry cookies without added sugar. Sweetened naturally with cranberries.",
     },
     {
       id: 8,
-      category: "fudge-brownies",
+      category: "sugar-free-cookies",
       image:
-        "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=300&fit=crop",
-      name: "Classic Fudge Brownies",
-      tags: ["Premium", "Chocolate", "Fudgy"],
+        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      name: "Sugar-Free Chocolate Cookie",
+      tags: ["Sugar-Free", "Chocolate", "Diabetic-Friendly"],
       description:
-        "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
+        "Rich chocolate cookies without the sugar. Perfect for health-conscious chocolate lovers.",
     },
     {
       id: 9,
       category: "fudge-brownies",
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-      name: "Walnut Fudge Brownies",
-      tags: ["Premium", "Chocolate", "Nuts"],
+        "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=300&fit=crop",
+      name: "Fudge Brownies",
+      tags: ["Premium", "Chocolate", "Fudgy"],
       description:
-        "Fudgy brownies loaded with crunchy walnuts for added texture and flavor.",
+        "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
+    },
+    {
+      id: 10,
+      category: "sugar-free-muffins",
+      image:
+        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      name: "Sugar-Free Carrot Muffins",
+      tags: ["Sugar-Free", "Carrot", "Healthy"],
+      description:
+        "Moist carrot muffins made with fresh carrots and natural sweeteners.",
+    },
+    {
+      id: 11,
+      category: "sugar-free-muffins",
+      image:
+        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      name: "Sugar-Free Lemon Muffins",
+      tags: ["Sugar-Free", "Lemon", "Citrus"],
+      description:
+        "Refreshing lemon muffins with a bright citrus flavor and no added sugar.",
     },
   ];
 
@@ -143,8 +162,8 @@ const Products = () => {
         <div className="container">
           <h1 className="products-section-title">OUR PRODUCT RANGE</h1>
           <p className="products-section-subtitle">
-            Premium frozen dough and ready-to-sell baked goods for businesses
-            and individuals
+            Premium cookies, muffins, and brownies for businesses and
+            individuals
           </p>
         </div>
       </section>
@@ -164,19 +183,11 @@ const Products = () => {
             </button>
             <button
               className={`products-category-btn ${
-                selectedCategory === "frozen-dough" ? "active" : ""
+                selectedCategory === "cookies" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("frozen-dough")}
+              onClick={() => setSelectedCategory("cookies")}
             >
-              Frozen Cookie Dough
-            </button>
-            <button
-              className={`products-category-btn ${
-                selectedCategory === "mini-cookies" ? "active" : ""
-              }`}
-              onClick={() => setSelectedCategory("mini-cookies")}
-            >
-              Mini Cookies
+              Cookies
             </button>
             <button
               className={`products-category-btn ${

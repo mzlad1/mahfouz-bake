@@ -32,19 +32,19 @@ const Home = () => {
       id: 1,
       image:
         "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
-      name: "Frozen Cookie Dough",
-      tags: ["Premium", "Frozen"],
+      name: "Red Velvet Cookie",
+      tags: ["Premium", "Red Velvet"],
       description:
-        "Ready-to-bake premium cookie dough for consistent results every time.",
+        "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
     {
       id: 2,
       image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
-      name: "Sugar-Free Cookies",
-      tags: ["Sugar-Free", "Healthy"],
+        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      name: "Double Cookie",
+      tags: ["Premium", "Double Chocolate"],
       description:
-        "Delicious cookies without the sugar, perfect for health-conscious customers.",
+        "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
     {
       id: 3,
