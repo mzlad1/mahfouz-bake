@@ -275,23 +275,25 @@ body {
   }
 }
 
-/* Hero Image */
+/* Hero Image - Logo with Slogan */
 .home-hero-image {
   position: relative;
   animation: homeSlideInRight 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .home-image-wrapper {
   position: relative;
-  border-radius: 20px;
   overflow: hidden;
-  box-shadow: var(--shadow-hover);
-  transform: rotate(-5deg);
   transition: var(--transition-smooth);
+  max-width: 600px;
+  width: 100%;
 }
 
 .home-image-wrapper:hover {
-  transform: rotate(-2deg) scale(1.05);
+  transform: scale(1.05);
 }
 
 .home-hero-image img {
@@ -299,38 +301,24 @@ body {
   height: auto;
   display: block;
   transition: var(--transition-smooth);
+  filter: drop-shadow(0 2px 1px rgba(255, 255, 255, 0.3));
 }
 
-.home-image-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(
-    45deg,
-    rgba(59, 38, 72, 0.1),
-    rgba(240, 180, 125, 0.1)
-  );
-  opacity: 0;
-  transition: var(--transition-smooth);
-}
-
-.home-image-wrapper:hover .home-image-overlay {
-  opacity: 1;
+.home-image-wrapper:hover img {
+  filter: drop-shadow(0 5px 1px rgba(255, 255, 255, 0.3));
 }
 
 .home-floating-element {
-  animation: homeFloating 6s ease-in-out infinite;
+  animation: homeLogoFloat 6s ease-in-out infinite;
 }
 
-@keyframes homeFloating {
+@keyframes homeLogoFloat {
   0%,
   100% {
-    transform: translateY(0px) rotate(-5deg);
+    transform: translateY(0px) scale(1);
   }
   50% {
-    transform: translateY(-20px) rotate(-3deg);
+    transform: translateY(-15px) scale(1.02);
   }
 }
 
@@ -734,6 +722,10 @@ body {
   background: rgba(255, 0, 80, 0.2);
 }
 
+.home-facebook-link:hover {
+  background: rgba(66, 103, 178, 0.2);
+}
+
 /* Animation Classes */
 .home-fade-in-up {
   opacity: 0;
@@ -806,6 +798,10 @@ body {
 
   .home-hero-image {
     order: -1;
+  }
+
+  .home-image-wrapper {
+    max-width: 400px;
   }
 
   .home-mission-vision-grid {

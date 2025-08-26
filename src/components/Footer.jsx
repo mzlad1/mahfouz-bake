@@ -14,6 +14,8 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact</h4>
             <p>Email: mahfouzbake1@outlook.com</p>
+            <p>Phone: 0593 666 676</p>
+            <p>Location: Al Teereh, Ramallah, Palestine</p>
             <div className="footer-social-links">
               <a
                 href="https://wa.me/970593666676"
@@ -51,14 +53,25 @@ const Footer = () => {
                   className="footer-social-icon"
                 />
               </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61579324492276"
+                className="footer-social-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/facebook.png"
+                  alt="Facebook"
+                  className="footer-social-icon"
+                />
+              </a>
             </div>
           </div>
 
           <div className="footer-section">
             <h4>Business Hours</h4>
-            <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-            <p>Saturday: 9:00 AM - 4:00 PM</p>
-            <p>Sunday: Closed</p>
+            <p>Saturday - Thursday: 8:00 AM - 10:00 PM</p>
+            <p>Friday: 12:00 PM - 10:00 PM</p>
           </div>
 
           <div className="footer-section">

@@ -148,6 +148,18 @@ const Contact = () => {
               </div>
 
               <div className="contact-info-item">
+                <h3>Phone</h3>
+                <p>
+                  <a href="tel:+970593666676">0593 666 676</a>
+                </p>
+              </div>
+
+              <div className="contact-info-item">
+                <h3>Location</h3>
+                <p>Al Teereh, Ramallah, Palestine</p>
+              </div>
+
+              <div className="contact-info-item">
                 <h3>Social Media</h3>
                 <div className="contact-social-links">
                   <a
@@ -186,15 +198,26 @@ const Contact = () => {
                       className="contact-social-icon"
                     />
                   </a>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61579324492276"
+                    className="contact-social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img
+                      src="/images/facebook.png"
+                      alt="Facebook"
+                      className="contact-social-icon"
+                    />
+                  </a>
                 </div>
               </div>
 
               <div className="contact-info-item">
                 <h3>Business Hours</h3>
                 <ul>
-                  <li>Monday - Friday: 8:00 AM - 6:00 PM</li>
-                  <li>Saturday: 9:00 AM - 4:00 PM</li>
-                  <li>Sunday: Closed</li>
+                  <li>Saturday - Thursday: 8:00 AM - 10:00 PM</li>
+                  <li>Friday: 12:00 PM - 10:00 PM</li>
                 </ul>
               </div>
 

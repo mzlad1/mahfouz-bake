@@ -98,8 +98,10 @@ const Home = () => {
           </div>
           <div className="home-hero-image home-floating-element">
             <div className="home-image-wrapper">
-              <img src="/images/heroImage.jpg" alt="Freshly baked cookies" />
-              <div className="home-image-overlay"></div>
+              <img
+                src="/images/logowithsolgan.png"
+                alt="Mahfouz Bake Logo with Slogan"
+              />
             </div>
           </div>
         </div>
@@ -235,6 +237,19 @@ const Home = () => {
                   className="home-social-icon"
                 />
                 <span className="home-social-tooltip">TikTok</span>
+              </a>
+              <a
+                href="https://www.facebook.com/profile.php?id=61579324492276"
+                className="home-social-link home-facebook-link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/images/facebook.png"
+                  alt="Facebook"
+                  className="home-social-icon"
+                />
+                <span className="home-social-tooltip">Facebook</span>
               </a>
             </div>
           </div>
