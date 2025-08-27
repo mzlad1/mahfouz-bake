@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useLoadingContext } from "../context/LoadingContext";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { startLoading } = useLoadingContext();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -14,6 +16,14 @@ const Navbar = () => {
     setIsMenuOpen(false);
   };
 
+  const handleNavigation = (path) => {
+    // Only trigger loading if navigating to a different page
+    if (location.pathname !== path) {
+      startLoading();
+    }
+    closeMenu();
+  };
+
   const isActive = (path) => {
     return location.pathname === path;
   };
@@ -21,7 +31,11 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="container">
-        <Link to="/" className="navbar-brand" onClick={closeMenu}>
+        <Link
+          to="/"
+          className="navbar-brand"
+          onClick={() => handleNavigation("/")}
+        >
           <div className="brand-content">
             <img
               src="/images/logo.png"
@@ -40,35 +54,35 @@ const Navbar = () => {
           <Link
             to="/"
             className={`nav-link ${isActive("/") ? "active" : ""}`}
-            onClick={closeMenu}
+            onClick={() => handleNavigation("/")}
           >
             Home
           </Link>
           <Link
             to="/products"
             className={`nav-link ${isActive("/products") ? "active" : ""}`}
-            onClick={closeMenu}
+            onClick={() => handleNavigation("/products")}
           >
             Products
           </Link>
           <Link
             to="/about"
             className={`nav-link ${isActive("/about") ? "active" : ""}`}
-            onClick={closeMenu}
+            onClick={() => handleNavigation("/about")}
           >
             About
           </Link>
           <Link
             to="/clients"
             className={`nav-link ${isActive("/clients") ? "active" : ""}`}
-            onClick={closeMenu}
+            onClick={() => handleNavigation("/clients")}
           >
             Clients
           </Link>
           <Link
             to="/contact"
             className={`nav-link ${isActive("/contact") ? "active" : ""}`}
-            onClick={closeMenu}
+            onClick={() => handleNavigation("/contact")}
           >
             Contact
           </Link>

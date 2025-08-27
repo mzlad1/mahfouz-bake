@@ -1,9 +1,5 @@
 .clients-hero {
-  background: linear-gradient(
-    135deg,
-    var(--lavender-floral),
-    var(--lavender-floral-2)
-  );
+  background: linear-gradient(135deg, var(--secondary), var(--secondary));
   color: var(--white);
   text-align: center;
 }
@@ -35,7 +31,7 @@
 }
 
 .clients-audience-card h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.4rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -55,7 +51,7 @@
 }
 
 .clients-benefit-tag {
-  background: var(--fawn);
+  background: var(--accent);
   color: var(--white);
   padding: 6px 12px;
   border-radius: 15px;
@@ -88,7 +84,7 @@
 }
 
 .clients-trust-card h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.4rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -109,7 +105,7 @@
 }
 
 .clients-benefits-text h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 2rem;
   margin-bottom: 25px;
   font-weight: 700;
@@ -133,7 +129,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--fawn);
+  color: var(--accent);
   font-weight: bold;
   font-size: 1.2rem;
 }
@@ -143,7 +139,7 @@
 }
 
 .clients-benefits-text strong {
-  color: var(--dark-purple);
+  color: var(--primary);
 }
 
 .clients-benefits-image img {
@@ -156,7 +152,7 @@
 
 /* Call to Action */
 .clients-cta-section {
-  background: linear-gradient(135deg, var(--dark-purple), var(--eminence));
+  background: linear-gradient(135deg, var(--primary), var(--primary));
   color: var(--white);
   text-align: center;
 }

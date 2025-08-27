@@ -1,14 +1,28 @@
 /* CSS Variables */
 :root {
-  --fawn: #f0b47d;
-  --brown-sugar: #a55a32;
-  --dark-purple: #3b2648;
-  --eminence: #5a3a79;
-  --lavender-floral: #997ac6;
-  --lavender-floral-2: #be91ff;
+  /* Primary Color Palette */
+  --primary: #4c2a77; /* Dark Purple */
+  --secondary: #c192ff; /* Lavender */
+  --accent: #f2ac5f; /* Warm Orange */
+
+  /* Neutral Colors */
   --white: #ffffff;
   --light-gray: #f8f9fa;
   --gray: #6c757d;
+
+  /* Legacy color names for compatibility */
+  --fawn: var(--accent);
+  --brown-sugar: var(--accent);
+  --dark-purple: var(--primary);
+  --eminence: var(--primary);
+  --lavender-floral: var(--secondary);
+  --lavender-floral-2: var(--secondary);
+
+  /* Font Variables */
+  --font-primary: "Genki Desu DEMO", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, sans-serif;
+  --font-secondary: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
 }
 
 /* Global Styles */
@@ -19,10 +33,9 @@
 }
 
 body {
-  font-family: "Sour Gummy", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: var(--font-secondary);
   line-height: 1.6;
-  color: var(--dark-purple);
+  color: var(--primary);
   background-color: var(--white);
 }
 
@@ -33,8 +46,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Sour Gummy", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: var(--font-primary);
   font-weight: 700;
   line-height: 1.2;
 }
@@ -47,8 +59,7 @@ button,
 input,
 textarea,
 label {
-  font-family: "Sour Gummy", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, sans-serif;
+  font-family: var(--font-secondary);
 }
 
 /* Container */
@@ -68,7 +79,7 @@ label {
   font-weight: 800;
   margin-bottom: 20px;
   text-align: center;
-  color: var(--dark-purple);
+  color: var(--primary);
 }
 
 .section-subtitle {
@@ -85,7 +96,7 @@ label {
 .btn {
   display: inline-block;
   padding: 12px 24px;
-  background: linear-gradient(135deg, var(--dark-purple), var(--eminence));
+  background: linear-gradient(135deg, var(--primary), var(--primary));
   color: var(--white);
   text-decoration: none;
   border: none;
@@ -93,36 +104,36 @@ label {
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 15px rgba(59, 38, 72, 0.3);
+  box-shadow: 0 4px 15px rgba(76, 42, 119, 0.3);
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(59, 38, 72, 0.4);
+  box-shadow: 0 6px 20px rgba(76, 42, 119, 0.4);
 }
 
 .btn-secondary {
-  background: linear-gradient(135deg, var(--fawn), var(--brown-sugar));
-  box-shadow: 0 4px 15px rgba(240, 180, 125, 0.3);
+  background: linear-gradient(135deg, var(--accent), var(--accent));
+  box-shadow: 0 4px 15px rgba(242, 172, 95, 0.3);
 }
 
 .btn-secondary:hover {
-  box-shadow: 0 6px 20px rgba(240, 180, 125, 0.4);
+  box-shadow: 0 6px 20px rgba(242, 172, 95, 0.4);
 }
 
 /* Cards */
 .card {
   background: var(--white);
   border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(59, 38, 72, 0.1);
+  box-shadow: 0 4px 20px rgba(76, 42, 119, 0.1);
   padding: 24px;
   transition: all 0.3s ease;
-  border: 1px solid rgba(90, 58, 121, 0.1);
+  border: 1px solid rgba(76, 42, 119, 0.1);
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(59, 38, 72, 0.15);
+  box-shadow: 0 8px 30px rgba(76, 42, 119, 0.15);
 }
 
 /* Responsive Design */

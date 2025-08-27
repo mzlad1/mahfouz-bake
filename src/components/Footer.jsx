@@ -1,6 +1,18 @@
+import { Link, useLocation } from "react-router-dom";
+import { useLoadingContext } from "../context/LoadingContext";
 import "./Footer.css";
 
 const Footer = () => {
+  const { startLoading } = useLoadingContext();
+  const location = useLocation();
+
+  const handleNavigation = (path) => {
+    // Only trigger loading if navigating to a different page
+    if (location.pathname !== path) {
+      startLoading();
+    }
+  };
+
   return (
     <footer className="footer">
       <div className="container">
@@ -78,16 +90,33 @@ const Footer = () => {
             <h4>Quick Links</h4>
             <ul>
               <li>
-                <a href="/products">Products</a>
+                <Link
+                  to="/products"
+                  onClick={() => handleNavigation("/products")}
+                >
+                  Products
+                </Link>
               </li>
               <li>
-                <a href="/about">About Us</a>
+                <Link to="/about" onClick={() => handleNavigation("/about")}>
+                  About Us
+                </Link>
               </li>
               <li>
-                <a href="/clients">For Businesses</a>
+                <Link
+                  to="/clients"
+                  onClick={() => handleNavigation("/clients")}
+                >
+                  For Businesses
+                </Link>
               </li>
               <li>
-                <a href="/contact">Contact</a>
+                <Link
+                  to="/contact"
+                  onClick={() => handleNavigation("/contact")}
+                >
+                  Contact
+                </Link>
               </li>
             </ul>
           </div>

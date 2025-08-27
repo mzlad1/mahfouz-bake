@@ -1,5 +1,5 @@
 .contact-hero {
-  background: linear-gradient(135deg, var(--fawn), var(--brown-sugar));
+  background: linear-gradient(135deg, var(--accent), var(--accent));
   color: var(--white);
   text-align: center;
 }
@@ -22,7 +22,7 @@
 
 /* Contact Form */
 .contact-form-container h2 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 700;
@@ -40,7 +40,7 @@
 }
 
 .contact-form-group label {
-  color: var(--dark-purple);
+  color: var(--primary);
   font-weight: 600;
   margin-bottom: 8px;
   font-size: 0.95rem;
@@ -59,8 +59,8 @@
 .contact-form-group input:focus,
 .contact-form-group textarea:focus {
   outline: none;
-  border-color: var(--fawn);
-  box-shadow: 0 0 0 3px rgba(240, 180, 125, 0.1);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(242, 172, 95, 0.1);
 }
 
 .contact-form-group textarea {
@@ -101,7 +101,7 @@
 
 /* Contact Information */
 .contact-info h2 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 2rem;
   margin-bottom: 30px;
   font-weight: 700;
@@ -112,7 +112,7 @@
 }
 
 .contact-info-item h3 {
-  color: var(--dark-purple);
+  color: var(--primary);
   font-size: 1.3rem;
   margin-bottom: 12px;
   font-weight: 600;
@@ -126,7 +126,7 @@
 }
 
 .contact-info-item a {
-  color: var(--fawn);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 500;
 }
@@ -149,7 +149,7 @@
   content: "•";
   position: absolute;
   left: 0;
-  color: var(--fawn);
+  color: var(--accent);
   font-weight: bold;
 }
 
@@ -161,11 +161,11 @@
 }
 
 .contact-social-link {
-  color: var(--fawn);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   padding: 8px;
-  border: 2px solid var(--fawn);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   transition: all 0.3s ease;
   display: flex;
@@ -176,10 +176,10 @@
 }
 
 .contact-social-link:hover {
-  background: var(--fawn);
+  background: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(240, 180, 125, 0.3);
+  box-shadow: 0 4px 15px rgba(242, 172, 95, 0.3);
 }
 
 .contact-social-icon {
@@ -212,7 +212,7 @@
 }
 
 .contact-faq-item h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.3rem;
   margin-bottom: 15px;
   font-weight: 700;

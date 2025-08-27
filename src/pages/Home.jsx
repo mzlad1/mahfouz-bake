@@ -1,9 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { useLoadingContext } from "../context/LoadingContext";
 import ProductCard from "../components/ProductCard";
 import "./Home.css";
 
 const Home = () => {
+  const { startLoading } = useLoadingContext();
+  const location = useLocation();
+
+  const handleNavigation = (path) => {
+    // Only trigger loading if navigating to a different page
+    if (location.pathname !== path) {
+      startLoading();
+    }
+  };
+
   // Typing effect hook
   const useTypingEffect = (text, speed = 100) => {
     const [displayedText, setDisplayedText] = useState("");
@@ -86,11 +97,16 @@ const Home = () => {
                 <Link
                   to="/products"
                   className="home-btn home-btn-primary home-pulse-btn"
+                  onClick={() => handleNavigation("/products")}
                 >
                   <span>Explore Products</span>
                   <div className="home-btn-shine"></div>
                 </Link>
-                <Link to="/contact" className="home-btn home-btn-secondary">
+                <Link
+                  to="/contact"
+                  className="home-btn home-btn-secondary"
+                  onClick={() => handleNavigation("/contact")}
+                >
                   Get in Touch
                 </Link>
               </div>
@@ -170,7 +186,11 @@ const Home = () => {
             ))}
           </div>
           <div className="home-text-center home-fade-in-up">
-            <Link to="/products" className="home-btn home-btn-primary">
+            <Link
+              to="/products"
+              className="home-btn home-btn-primary"
+              onClick={() => handleNavigation("/products")}
+            >
               <span>View All Products</span>
               <div className="home-btn-shine"></div>
             </Link>

@@ -1,5 +1,5 @@
 .products-hero {
-  background: linear-gradient(135deg, var(--eminence), var(--lavender-floral));
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--white);
   text-align: center;
 }
@@ -42,11 +42,11 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   display: block;
-  color: var(--fawn);
+  color: var(--accent);
 }
 
 .products-benefit-card h3 {
-  color: var(--dark-purple);
+  color: var(--primary);
   font-size: 1.2rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -72,9 +72,9 @@
 
 .products-category-btn {
   padding: 12px 24px;
-  border: 2px solid var(--fawn);
+  border: 2px solid var(--accent);
   background: transparent;
-  color: var(--fawn);
+  color: var(--accent);
   border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
@@ -83,15 +83,15 @@
 }
 
 .products-category-btn:hover {
-  background: var(--fawn);
+  background: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
 }
 
 .products-category-btn.active {
-  background: var(--fawn);
+  background: var(--accent);
   color: var(--white);
-  box-shadow: 0 4px 15px rgba(240, 180, 125, 0.3);
+  box-shadow: 0 4px 15px rgba(242, 172, 95, 0.3);
 }
 
 /* Products Grid */
@@ -139,11 +139,11 @@
   font-size: 2.5rem;
   margin-bottom: 20px;
   display: block;
-  color: var(--fawn);
+  color: var(--accent);
 }
 
 .products-feature-card h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.2rem;
   margin-bottom: 15px;
   font-weight: 700;

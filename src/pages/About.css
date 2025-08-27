@@ -1,5 +1,5 @@
 .about-hero {
-  background: linear-gradient(135deg, var(--brown-sugar), var(--fawn));
+  background: linear-gradient(135deg, var(--accent), var(--accent));
   color: var(--white);
   text-align: center;
 }
@@ -21,7 +21,7 @@
 }
 
 .about-story-text h2 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 2.2rem;
   margin-bottom: 25px;
   font-weight: 700;
@@ -59,7 +59,7 @@
 
 .about-mission-detail h2,
 .about-vision-detail h2 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.8rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -92,7 +92,7 @@
 }
 
 .about-value-card h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.4rem;
   margin-bottom: 15px;
   font-weight: 700;
@@ -122,17 +122,17 @@
   padding: 25px;
   background: var(--white);
   border-radius: 15px;
-  box-shadow: 0 4px 20px rgba(59, 38, 72, 0.1);
+  box-shadow: 0 4px 20px rgba(76, 42, 119, 0.1);
   transition: all 0.3s ease;
 }
 
 .about-highlight-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 30px rgba(59, 38, 72, 0.15);
+  box-shadow: 0 8px 30px rgba(76, 42, 119, 0.15);
 }
 
 .about-highlight-icon {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 2rem;
   font-weight: bold;
   flex-shrink: 0;
@@ -144,7 +144,7 @@
 }
 
 .about-highlight-title {
-  color: var(--dark-purple);
+  color: var(--primary);
   font-size: 1.3rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -167,7 +167,7 @@
 }
 
 .about-audience-card h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.6rem;
   margin-bottom: 20px;
   font-weight: 700;
@@ -190,7 +190,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: var(--fawn);
+  color: var(--accent);
   font-weight: bold;
 }
 

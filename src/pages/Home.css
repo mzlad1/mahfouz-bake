@@ -1,30 +1,34 @@
 /* CSS Custom Properties */
 :root {
-  --fawn: #f0b47d;
-  --brown-sugar: #a55a32;
-  --dark-purple: #3b2648;
-  --eminence: #5a3a79;
-  --lavender-floral: #997ac6;
-  --lavender-floral-2: #be91ff;
+  /* Primary Color Palette */
+  --primary: #4c2a77; /* Dark Purple */
+  --secondary: #c192ff; /* Lavender */
+  --accent: #f2ac5f; /* Warm Orange */
+
+  /* Neutral Colors */
   --white: #ffffff;
   --light-gray: #f8f9fa;
   --gray: #6c757d;
 
+  /* Legacy color names for compatibility */
+  --fawn: var(--accent);
+  --brown-sugar: var(--accent);
+  --dark-purple: var(--primary);
+  --eminence: var(--primary);
+  --lavender-floral: var(--secondary);
+  --lavender-floral-2: var(--secondary);
+
   /* Animation variables */
   --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  --shadow-soft: 0 10px 30px rgba(59, 38, 72, 0.1);
-  --shadow-hover: 0 20px 60px rgba(59, 38, 72, 0.15);
-  --gradient-primary: linear-gradient(
-    135deg,
-    var(--eminence),
-    var(--lavender-floral)
-  );
-  --gradient-accent: linear-gradient(135deg, var(--fawn), var(--brown-sugar));
+  --shadow-soft: 0 10px 30px rgba(76, 42, 119, 0.1);
+  --shadow-hover: 0 20px 60px rgba(76, 42, 119, 0.15);
+  --gradient-primary: linear-gradient(135deg, var(--primary), var(--secondary));
+  --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent));
   --gradient-hero: linear-gradient(
     135deg,
-    rgba(59, 38, 72, 0.95),
-    rgba(90, 58, 121, 0.9)
+    rgba(76, 42, 119, 0.95),
+    rgba(193, 146, 255, 0.9)
   );
 }
 
@@ -42,8 +46,8 @@ body {
 .home-page {
   min-height: 100vh;
   background: var(--white);
-  color: var(--dark-purple);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--primary);
+  font-family: var(--font-secondary);
   line-height: 1.6;
 }
 
@@ -63,7 +67,7 @@ body {
 .home-highlight {
   display: inline-block;
   position: relative;
-  color: var(--fawn);
+  color: var(--accent);
   background: var(--gradient-accent);
   background-clip: text;
   -webkit-background-clip: text;
@@ -72,9 +76,9 @@ body {
 }
 
 .home-cursor {
-  color: var(--fawn);
+  color: var(--accent);
   animation: none;
-  -webkit-text-fill-color: var(--fawn);
+  -webkit-text-fill-color: var(--accent);
 }
 
 .home-cursor.blink {
@@ -108,7 +112,13 @@ body {
   display: flex;
   align-items: center;
   position: relative;
-  background: var(--gradient-hero);
+  background: linear-gradient(
+      135deg,
+      rgba(76, 42, 119, 0.8),
+      rgba(193, 146, 255, 0.7)
+    ),
+    url("/images/heroImage.jpg") no-repeat center center;
+  background-size: cover;
   color: var(--white);
   overflow: hidden;
 }
@@ -238,7 +248,7 @@ body {
 
 .home-btn-secondary:hover {
   background: var(--white);
-  color: var(--dark-purple);
+  color: var(--primary);
   transform: translateY(-3px);
 }
 
@@ -334,8 +344,8 @@ body {
 .home-scroll-arrow {
   width: 30px;
   height: 30px;
-  border-right: 2px solid var(--fawn);
-  border-bottom: 2px solid var(--fawn);
+  border-right: 2px solid var(--accent);
+  border-bottom: 2px solid var(--accent);
   transform: rotate(45deg);
 }
 
@@ -382,7 +392,7 @@ body {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--dark-purple);
+  color: var(--primary);
   position: relative;
 }
 
@@ -455,7 +465,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   margin-bottom: 20px;
-  color: var(--eminence);
+  color: var(--primary);
 }
 
 .home-card p {
@@ -634,9 +644,9 @@ body {
 .home-social-handle {
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--fawn);
+  color: var(--accent);
   margin-bottom: 40px;
-  font-family: "Courier New", monospace;
+  font-family: var(--font-secondary);
   min-height: 1.5rem;
 }
 
@@ -954,7 +964,7 @@ html {
 /* Focus states for accessibility */
 .home-btn:focus,
 .home-social-link:focus {
-  outline: 2px solid var(--fawn);
+  outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
 
@@ -962,13 +972,13 @@ html {
 @media print {
   .home-hero,
   .home-social-banner {
-    color: var(--dark-purple) !important;
+    color: var(--primary) !important;
     background: var(--white) !important;
   }
 
   .home-btn {
-    border: 1px solid var(--dark-purple) !important;
+    border: 1px solid var(--primary) !important;
     background: transparent !important;
-    color: var(--dark-purple) !important;
+    color: var(--primary) !important;
   }
 }

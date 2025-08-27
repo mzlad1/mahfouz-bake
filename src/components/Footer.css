@@ -1,5 +1,5 @@
 .footer {
-  background: var(--dark-purple);
+  background: var(--primary);
   color: var(--white);
   padding: 60px 0 20px;
 }
@@ -12,14 +12,14 @@
 }
 
 .footer-section h3 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.3rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
 
 .footer-section h4 {
-  color: var(--fawn);
+  color: var(--accent);
   font-size: 1.1rem;
   margin-bottom: 15px;
   font-weight: 600;
@@ -47,7 +47,7 @@
 }
 
 .footer-section ul li a:hover {
-  color: var(--fawn);
+  color: var(--accent);
 }
 
 .footer-social-links {
@@ -58,11 +58,11 @@
 }
 
 .footer-social-link {
-  color: var(--fawn);
+  color: var(--accent);
   text-decoration: none;
   font-weight: 600;
   padding: 8px;
-  border: 2px solid var(--fawn);
+  border: 2px solid var(--accent);
   border-radius: 50%;
   transition: all 0.3s ease;
   display: flex;
@@ -73,10 +73,10 @@
 }
 
 .footer-social-link:hover {
-  background: var(--fawn);
+  background: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
-  box-shadow: 0 4px 15px rgba(240, 180, 125, 0.3);
+  box-shadow: 0 4px 15px rgba(242, 172, 95, 0.3);
 }
 
 .footer-social-icon {
