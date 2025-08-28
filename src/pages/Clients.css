@@ -1,5 +1,5 @@
 .clients-hero {
-  background: linear-gradient(135deg, var(--secondary), var(--secondary));
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
   color: var(--white);
   text-align: center;
 }
