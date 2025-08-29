@@ -4,6 +4,8 @@ import "./Products.css";
 
 const Products = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage, setItemsPerPage] = useState(3);
 
   const categories = [
     { id: "all", name: "All Products" },
@@ -41,112 +43,139 @@ const Products = () => {
     {
       id: 1,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Red velvet cookie.jpg",
+        "/images/products/WhiteBackground/Red velvet cookie11.jpg",
+      ],
       name: "Red Velvet Cookie",
-      tags: ["Premium", "Red Velvet", "Classic"],
       description:
         "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
     {
       id: 2,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Double cookie.jpg",
+        "/images/products/Styling/Double cookie2.jpg",
+        "/images/products/WhiteBackground/Double cookie11.jpg",
+        "/images/products/WhiteBackground/Double cookie33.jpg",
+      ],
       name: "Double Cookie",
-      tags: ["Premium", "Double", "Chocolate"],
       description:
         "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
     {
       id: 3,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Classic cookie.jpg",
+        "/images/products/WhiteBackground/Classic cookie11.jpg",
+        "/images/products/WhiteBackground/Classic cookie22.jpg",
+      ],
       name: "Classic Cookie",
-      tags: ["Classic", "Traditional", "Timeless"],
       description:
         "The perfect classic cookie with a golden brown exterior and soft, chewy center.",
     },
     {
       id: 4,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Oats cookie1.jpg",
+        "/images/products/WhiteBackground/Oats cookie11.jpg",
+      ],
       name: "Oats Cookie",
-      tags: ["Oats", "Healthy", "Nutritious"],
       description:
         "Wholesome oatmeal cookies with a hearty texture and natural sweetness.",
     },
     {
       id: 5,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Sprinkles cookie1.jpg",
+        "/images/products/WhiteBackground/Sprinkles cookie11.jpg",
+      ],
       name: "Sprinkles Cookie",
-      tags: ["Fun", "Colorful", "Party"],
       description:
         "Festive cookies loaded with colorful sprinkles, perfect for celebrations and parties.",
     },
     {
       id: 6,
       category: "cookies",
-      image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Reeses cookie1.jpg",
+        "/images/products/WhiteBackground/Reeses cookie11.jpg",
+        "/images/products/WhiteBackground/Reeses Cookie33.jpg",
+      ],
       name: "Reeses Cookie",
-      tags: ["Peanut Butter", "Chocolate", "Reeses"],
       description:
         "Irresistible cookies featuring the perfect combination of peanut butter and chocolate.",
     },
     {
       id: 7,
       category: "sugar-free-cookies",
-      image:
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/cranberry1.jpg",
+        "/images/products/WhiteBackground/cranberry11.jpg",
+        "/images/products/WhiteBackground/cranberry33.jpg",
+      ],
       name: "Sugar-Free Cranberry Cookie",
-      tags: ["Sugar-Free", "Cranberry", "Healthy"],
       description:
         "Delicious cranberry cookies without added sugar. Sweetened naturally with cranberries.",
     },
     {
       id: 8,
       category: "sugar-free-cookies",
-      image:
-        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/chocolate1.jpg",
+        "/images/products/WhiteBackground/chocolate11.jpg",
+      ],
       name: "Sugar-Free Chocolate Cookie",
-      tags: ["Sugar-Free", "Chocolate", "Diabetic-Friendly"],
       description:
         "Rich chocolate cookies without the sugar. Perfect for health-conscious chocolate lovers.",
     },
     {
       id: 9,
       category: "fudge-brownies",
-      image:
-        "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Fudge brownies1.jpg",
+        "/images/products/WhiteBackground/Fudge brownies11.jpg",
+      ],
       name: "Fudge Brownies",
-      tags: ["Premium", "Chocolate", "Fudgy"],
       description:
         "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
     },
     {
       id: 10,
       category: "sugar-free-muffins",
-      image:
-        "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/carrot1.jpg",
+        "/images/products/WhiteBackground/carrot11.jpg",
+      ],
       name: "Sugar-Free Carrot Muffins",
-      tags: ["Sugar-Free", "Carrot", "Healthy"],
       description:
         "Moist carrot muffins made with fresh carrots and natural sweeteners.",
     },
     {
       id: 11,
       category: "sugar-free-muffins",
-      image:
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/lemon1.jpg",
+        "/images/products/WhiteBackground/lemon11.jpg",
+      ],
       name: "Sugar-Free Lemon Muffins",
-      tags: ["Sugar-Free", "Lemon", "Citrus"],
       description:
         "Refreshing lemon muffins with a bright citrus flavor and no added sugar.",
+    },
+    {
+      id: 12,
+      category: "fudge-brownies",
+      images: [
+        "/images/products/Styling/Reeses Brownies1.jpg",
+        "/images/products/WhiteBackground/Reeses Brownies11.jpg",
+      ],
+      name: "Reeses Brownies",
+      description:
+        "Decadent brownies loaded with Reeses peanut butter cups for the ultimate chocolate experience.",
     },
   ];
 
@@ -154,6 +183,34 @@ const Products = () => {
     selectedCategory === "all"
       ? products
       : products.filter((product) => product.category === selectedCategory);
+
+  // Pagination logic
+  const totalPages = Math.ceil(filteredProducts.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const endIndex = startIndex + itemsPerPage;
+  const currentProducts = filteredProducts.slice(startIndex, endIndex);
+
+  // Reset to first page when category changes
+  const handleCategoryChange = (categoryId) => {
+    setSelectedCategory(categoryId);
+    setCurrentPage(1);
+  };
+
+  // Handle page change
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+    // Scroll to top of products section
+    window.scrollTo({
+      top: document.querySelector(".products-category-filter").offsetTop - 100,
+      behavior: "smooth",
+    });
+  };
+
+  // Handle items per page change
+  const handleItemsPerPageChange = (newItemsPerPage) => {
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1); // Reset to first page
+  };
 
   return (
     <div className="products-page">
@@ -177,7 +234,7 @@ const Products = () => {
               className={`products-category-btn ${
                 selectedCategory === "all" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("all")}
+              onClick={() => handleCategoryChange("all")}
             >
               All Products
             </button>
@@ -185,7 +242,7 @@ const Products = () => {
               className={`products-category-btn ${
                 selectedCategory === "cookies" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("cookies")}
+              onClick={() => handleCategoryChange("cookies")}
             >
               Cookies
             </button>
@@ -193,7 +250,7 @@ const Products = () => {
               className={`products-category-btn ${
                 selectedCategory === "sugar-free-cookies" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("sugar-free-cookies")}
+              onClick={() => handleCategoryChange("sugar-free-cookies")}
             >
               Sugar-Free Cookies
             </button>
@@ -201,7 +258,7 @@ const Products = () => {
               className={`products-category-btn ${
                 selectedCategory === "sugar-free-muffins" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("sugar-free-muffins")}
+              onClick={() => handleCategoryChange("sugar-free-muffins")}
             >
               Sugar-Free Muffins
             </button>
@@ -209,22 +266,88 @@ const Products = () => {
               className={`products-category-btn ${
                 selectedCategory === "fudge-brownies" ? "active" : ""
               }`}
-              onClick={() => setSelectedCategory("fudge-brownies")}
+              onClick={() => handleCategoryChange("fudge-brownies")}
             >
               Fudge Brownies
             </button>
           </div>
 
+          {/* Items Per Page Selector */}
+
           {/* Products Grid */}
-          {filteredProducts.length > 0 ? (
+          {currentProducts.length > 0 ? (
             <div className="products-grid">
-              {filteredProducts.map((product) => (
+              {currentProducts.map((product) => (
                 <ProductCard key={product.id} product={product} />
               ))}
             </div>
           ) : (
             <div className="products-no-products">
               <p>No products found in this category.</p>
+            </div>
+          )}
+
+          {/* Pagination */}
+          {totalPages > 1 && (
+            <div className="products-pagination">
+              {/* Previous Button */}
+              <button
+                className={`pagination-btn ${
+                  currentPage === 1 ? "disabled" : ""
+                }`}
+                onClick={() => handlePageChange(currentPage - 1)}
+                disabled={currentPage === 1}
+              >
+                ‹ Previous
+              </button>
+
+              {/* Page Numbers */}
+              <div className="pagination-numbers">
+                {Array.from(
+                  { length: totalPages },
+                  (_, index) => index + 1
+                ).map((page) => {
+                  // Show first page, last page, current page, and pages around current
+                  if (
+                    page === 1 ||
+                    page === totalPages ||
+                    (page >= currentPage - 1 && page <= currentPage + 1)
+                  ) {
+                    return (
+                      <button
+                        key={page}
+                        className={`pagination-number ${
+                          page === currentPage ? "active" : ""
+                        }`}
+                        onClick={() => handlePageChange(page)}
+                      >
+                        {page}
+                      </button>
+                    );
+                  } else if (
+                    page === currentPage - 2 ||
+                    page === currentPage + 2
+                  ) {
+                    return (
+                      <span key={page} className="pagination-ellipsis">
+                        ...
+                      </span>
+                    );
+                  }
+                  return null;
+                })}
+              </div>
+
+              {/* Next Button */}
+              <button
+                className={`pagination-btn ${
+                  currentPage === totalPages ? "disabled" : ""
+                }`}
+                onClick={() => handlePageChange(currentPage + 1)}
+                disabled={currentPage === totalPages}
+              >
+                Next ›
+              </button>
             </div>
           )}
         </div>

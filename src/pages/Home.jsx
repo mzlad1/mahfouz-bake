@@ -36,33 +36,37 @@ const Home = () => {
 
   // Social handle typing effect
   const socialTyping = useTypingEffect("@mahfouzbake", 150);
-  const heroTyping = useTypingEffect("Every Bite", 200);
+  const heroTyping = useTypingEffect("Every Bite", 400);
   // Sample product data for preview
   const featuredProducts = [
     {
       id: 1,
-      image:
-        "https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Red velvet cookie.jpg",
+        "/images/products/WhiteBackground/Red velvet cookie11.jpg",
+      ],
       name: "Red Velvet Cookie",
-      tags: ["Premium", "Red Velvet"],
       description:
         "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
     {
       id: 2,
-      image:
-        "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Double cookie.jpg",
+        "/images/products/Styling/Double cookie2.jpg",
+        "/images/products/WhiteBackground/Double cookie11.jpg",
+      ],
       name: "Double Cookie",
-      tags: ["Premium", "Double Chocolate"],
       description:
         "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
     {
       id: 3,
-      image:
-        "https://images.unsplash.com/photo-1606312619070-d48b4c652a52?w=400&h=300&fit=crop",
+      images: [
+        "/images/products/Styling/Fudge brownies1.jpg",
+        "/images/products/WhiteBackground/Fudge brownies11.jpg",
+      ],
       name: "Fudge Brownies",
-      tags: ["Premium", "Chocolate"],
       description:
         "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
     },
