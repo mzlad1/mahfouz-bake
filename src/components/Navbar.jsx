@@ -20,6 +20,8 @@ const Navbar = () => {
     // Only trigger loading if navigating to a different page
     if (location.pathname !== path) {
       startLoading();
+      // Scroll to top when navigating to a new page
+      window.scrollTo(0, 0);
     }
     closeMenu();
   };
@@ -59,18 +61,18 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            to="/products"
-            className={`nav-link ${isActive("/products") ? "active" : ""}`}
-            onClick={() => handleNavigation("/products")}
-          >
-            Products
-          </Link>
-          <Link
             to="/about"
             className={`nav-link ${isActive("/about") ? "active" : ""}`}
             onClick={() => handleNavigation("/about")}
           >
             About
+          </Link>
+          <Link
+            to="/products"
+            className={`nav-link ${isActive("/products") ? "active" : ""}`}
+            onClick={() => handleNavigation("/products")}
+          >
+            Products
           </Link>
           <Link
             to="/clients"
@@ -84,7 +86,7 @@ const Navbar = () => {
             className={`nav-link ${isActive("/contact") ? "active" : ""}`}
             onClick={() => handleNavigation("/contact")}
           >
-            Contact
+            Contact Us
           </Link>
         </div>
 

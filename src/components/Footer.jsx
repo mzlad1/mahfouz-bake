@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
+import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import "./Footer.css";
 
 const Footer = () => {
@@ -10,6 +11,8 @@ const Footer = () => {
     // Only trigger loading if navigating to a different page
     if (location.pathname !== path) {
       startLoading();
+      // Scroll to top when navigating to a new page
+      window.scrollTo(0, 0);
     }
   };
 
@@ -26,8 +29,7 @@ const Footer = () => {
           <div className="footer-section">
             <h4>Contact</h4>
             <p>Email: mahfouzbake1@outlook.com</p>
-            <p>Phone: 0593 666 676</p>
-            <p>Location: Al Teereh, Ramallah, Palestine</p>
+            <p>Phone: +970 593 666 676</p>
             <div className="footer-social-links">
               <a
                 href="https://wa.me/970593666676"
@@ -35,11 +37,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/whatsapp.png"
-                  alt="WhatsApp"
-                  className="footer-social-icon"
-                />
+                <FaWhatsapp className="footer-social-icon" />
               </a>
               <a
                 href="https://instagram.com/mahfouzbake"
@@ -47,11 +45,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/instagram.png"
-                  alt="Instagram"
-                  className="footer-social-icon"
-                />
+                <FaInstagram className="footer-social-icon" />
               </a>
               <a
                 href="https://tiktok.com/@mahfouzbake_"
@@ -59,11 +53,7 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/tiktok.png"
-                  alt="TikTok"
-                  className="footer-social-icon"
-                />
+                <FaTiktok className="footer-social-icon" />
               </a>
               <a
                 href="https://www.facebook.com/profile.php?id=61579324492276"
@@ -71,19 +61,9 @@ const Footer = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/facebook.png"
-                  alt="Facebook"
-                  className="footer-social-icon"
-                />
+                <FaFacebook className="footer-social-icon" />
               </a>
             </div>
-          </div>
-
-          <div className="footer-section">
-            <h4>Business Hours</h4>
-            <p>Saturday - Thursday: 8:00 AM - 10:00 PM</p>
-            <p>Friday: 12:00 PM - 10:00 PM</p>
           </div>
 
           <div className="footer-section">
@@ -119,6 +99,16 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>About</h4>
+            <p>Established 2023</p>
+            <p>
+              Premium frozen cookie dough and ready-to-sell freshly baked
+              cookies
+            </p>
+            <p>Clean-label ingredients, no preservatives</p>
           </div>
         </div>
 

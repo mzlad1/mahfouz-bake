@@ -12,7 +12,6 @@ const Clients = () => {
         "No extra labor",
         "Premium products",
       ],
-      icon: "☕",
     },
     {
       category: "Bakeries & Dessert Shops",
@@ -24,7 +23,6 @@ const Clients = () => {
         "Quality assurance",
         "Time savings",
       ],
-      icon: "🥐",
     },
     {
       category: "Restaurants & Hotels",
@@ -36,7 +34,6 @@ const Clients = () => {
         "Professional quality",
         "Service enhancement",
       ],
-      icon: "🍽️",
     },
     {
       category: "Retail Stores & Specialty Shops",
@@ -48,7 +45,6 @@ const Clients = () => {
         "Customer satisfaction",
         "Easy inventory",
       ],
-      icon: "🛍️",
     },
   ];
 
@@ -57,25 +53,21 @@ const Clients = () => {
       title: "Established Quality",
       description:
         "Since 2023, we've maintained the highest standards in every product we create.",
-      icon: "🏆",
     },
     {
       title: "Clean-Label Commitment",
       description:
         "No preservatives, no artificial additives - just pure, quality ingredients.",
-      icon: "🌿",
     },
     {
       title: "Business Partnership",
       description:
         "We work closely with our partners to ensure their success and satisfaction.",
-      icon: "🤝",
     },
     {
       title: "Innovation Focus",
       description:
         "Continuously developing new products and flavors to meet market demands.",
-      icon: "💡",
     },
   ];
 
@@ -99,7 +91,6 @@ const Clients = () => {
           <div className="clients-audiences-grid">
             {targetAudiences.map((audience, index) => (
               <div key={index} className="clients-audience-card card">
-                <div className="clients-audience-icon">{audience.icon}</div>
                 <h3>{audience.category}</h3>
                 <p className="clients-audience-description">
                   {audience.description}
@@ -124,7 +115,6 @@ const Clients = () => {
           <div className="clients-trust-grid">
             {trustFactors.map((factor, index) => (
               <div key={index} className="clients-trust-card card">
-                <div className="clients-trust-icon">{factor.icon}</div>
                 <h3>{factor.title}</h3>
                 <p>{factor.description}</p>
               </div>

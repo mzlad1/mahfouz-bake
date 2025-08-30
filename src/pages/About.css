@@ -1,5 +1,5 @@
 .about-hero {
-  background: linear-gradient(135deg, var( --accent-2), var(--accent));
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
   color: var(--white);
   text-align: center;
 }
@@ -85,12 +85,6 @@
   padding: 30px 20px;
 }
 
-.about-value-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-}
-
 .about-value-card h3 {
   color: var(--accent);
   font-size: 1.4rem;
@@ -104,59 +98,45 @@
   margin: 0;
 }
 
-/* Brand Highlights */
-.about-brand-highlights {
+/* Our Story Section */
+.about-our-story {
   background: var(--light-gray);
 }
 
-.about-highlights-grid {
+.about-our-story-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
-.about-highlight-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  padding: 25px;
+.about-our-story-card {
   background: var(--white);
-  border-radius: 15px;
+  padding: 40px;
+  border-radius: 20px;
   box-shadow: 0 4px 20px rgba(76, 42, 119, 0.1);
+  position: relative;
   transition: all 0.3s ease;
+  overflow: hidden;
+  border: 1px solid rgba(153, 122, 198, 0.1);
 }
 
-.about-highlight-item:hover {
-  transform: translateY(-5px);
+.about-our-story-card:hover {
+  transform: translateY(-10px);
   box-shadow: 0 8px 30px rgba(76, 42, 119, 0.15);
 }
 
-.about-highlight-icon {
-  color: var(--accent);
-  font-size: 2rem;
-  font-weight: bold;
-  flex-shrink: 0;
-  margin-top: 5px;
-}
-
-.about-highlight-content {
-  flex: 1;
-}
-
-.about-highlight-title {
-  color: var(--primary);
-  font-size: 1.3rem;
+.about-our-story-card h3 {
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  color: var(--primary);
 }
 
-.about-highlight-description {
+.about-our-story-card p {
   color: var(--gray);
-  line-height: 1.6;
-  margin: 0;
-  font-size: 1rem;
+  line-height: 1.7;
 }
 
 /* Target Audience */
@@ -218,8 +198,13 @@
     grid-template-columns: 1fr;
   }
 
-  .about-highlights-grid {
+  .about-our-story-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .about-our-story-card {
+    padding: 30px 20px;
   }
 
   .about-audience-grid {
@@ -240,7 +225,7 @@
     padding: 25px 15px;
   }
 
-  .about-highlight-item {
-    padding: 12px 15px;
+  .about-our-story-card {
+    padding: 25px 15px;
   }
 }

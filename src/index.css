@@ -93,6 +93,30 @@ label {
   margin-right: auto;
 }
 
+/* Logo-focused styling */
+.logo-emphasis {
+  position: relative;
+  display: inline-block;
+}
+
+.logo-emphasis::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(135deg, var(--accent), var(--secondary));
+  border-radius: 2px;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.logo-emphasis:hover::after {
+  transform: scaleX(1);
+}
+
 /* Buttons */
 .btn {
   display: inline-block;

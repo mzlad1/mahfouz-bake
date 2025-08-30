@@ -5,56 +5,19 @@ const About = () => {
     {
       title: "Quality without compromise",
       description: "Only the best natural ingredients.",
-      icon: "⭐",
     },
     {
       title: "Consistency at scale",
       description: "Everybite tastes just like the first.",
-      icon: "🔄",
     },
     {
       title: "Innovation",
       description:
         "Expanding our range with creative, health-conscious options.",
-      icon: "💡",
     },
     {
       title: "Sustainability",
       description: "Reducing waste with efficient production and packaging",
-      icon: "🌱",
-    },
-  ];
-
-  const brandHighlights = [
-    {
-      title: "Premium Ingredients",
-      description:
-        "High-quality, natural ingredients, free from preservatives and artificial additives.",
-      icon: "✓",
-    },
-    {
-      title: "Consistent Results",
-      description:
-        "Precision-portioned for uniform size, texture, and flavor every time.",
-      icon: "🔄",
-    },
-    {
-      title: "Time Saving",
-      description:
-        "No need for in-house baking expertise; simply bake or sell.",
-      icon: "⏰",
-    },
-    {
-      title: "Healthy Options",
-      description:
-        "Sugar-free options that cater to growing market demand for better-for-you treats.",
-      icon: "🌱",
-    },
-    {
-      title: "Innovative & Growing",
-      description:
-        "Constantly expanding with new flavors and health-conscious recipes.",
-      icon: "💡",
     },
   ];
 
@@ -104,7 +67,6 @@ const About = () => {
           <div className="about-values-grid">
             {values.map((value, index) => (
               <div key={index} className="about-value-card card">
-                <div className="about-value-icon">{value.icon}</div>
                 <h3>{value.title}</h3>
                 <p>{value.description}</p>
               </div>
@@ -113,22 +75,28 @@ const About = () => {
         </div>
       </section>
 
-      {/* Brand Highlights */}
-      <section className="about-brand-highlights section">
+      {/* Our Story Section */}
+      <section className="about-our-story section">
         <div className="container">
-          <h2 className="section-title">Excellence in Every Bite</h2>
-          <div className="about-highlights-grid">
-            {brandHighlights.map((highlight, index) => (
-              <div key={index} className="about-highlight-item">
-                <span className="about-highlight-icon">{highlight.icon}</span>
-                <div className="about-highlight-content">
-                  <h3 className="about-highlight-title">{highlight.title}</h3>
-                  <p className="about-highlight-description">
-                    {highlight.description}
-                  </p>
-                </div>
-              </div>
-            ))}
+          <h2 className="section-title">Our Mission & Vision</h2>
+          <div className="about-our-story-grid">
+            <div className="about-our-story-card card">
+              <h3>Our Mission</h3>
+              <p>
+                To create exceptional baked goods that combine premium taste,
+                clean ingredients, and ultimate convenience, empowering our
+                clients to serve their customers with confidence, consistency,
+                and joy.
+              </p>
+            </div>
+            <div className="about-our-story-card card">
+              <h3>Our Vision</h3>
+              <p>
+                To be the leading clean-label bakery brand in the Middle East,
+                known for innovation, trust, and irresistible taste, serving
+                both B2B and B2C markets across the region and beyond.
+              </p>
+            </div>
           </div>
         </div>
       </section>

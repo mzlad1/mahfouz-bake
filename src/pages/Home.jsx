@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { useLoadingContext } from "../context/LoadingContext";
 import ProductCard from "../components/ProductCard";
+import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import "./Home.css";
 
 const Home = () => {
@@ -12,6 +13,8 @@ const Home = () => {
     // Only trigger loading if navigating to a different page
     if (location.pathname !== path) {
       startLoading();
+      // Scroll to top when navigating to a new page
+      window.scrollTo(0, 0);
     }
   };
 
@@ -41,34 +44,52 @@ const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      images: [
-        "/images/products/Styling/Red velvet cookie.jpg",
-        "/images/products/WhiteBackground/Red velvet cookie11.jpg",
-      ],
+      images: ["/images/products/WhiteBackground/Red velvet cookie11.jpg"],
       name: "Red Velvet Cookie",
       description:
         "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
     {
       id: 2,
-      images: [
-        "/images/products/Styling/Double cookie.jpg",
-        "/images/products/Styling/Double cookie2.jpg",
-        "/images/products/WhiteBackground/Double cookie11.jpg",
-      ],
+      images: ["/images/products/WhiteBackground/Double cookie11.jpg"],
       name: "Double Cookie",
       description:
         "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
     {
       id: 3,
-      images: [
-        "/images/products/Styling/Fudge brownies1.jpg",
-        "/images/products/WhiteBackground/Fudge brownies11.jpg",
-      ],
+      images: ["/images/products/WhiteBackground/Fudge brownies22.jpg"],
       name: "Fudge Brownies",
       description:
         "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
+    },
+  ];
+
+  const brandHighlights = [
+    {
+      title: "Premium Ingredients",
+      description:
+        "High-quality, natural ingredients, free from preservatives and artificial additives.",
+    },
+    {
+      title: "Consistent Results",
+      description:
+        "Precision-portioned for uniform size, texture, and flavor every time.",
+    },
+    {
+      title: "Time Saving",
+      description:
+        "No need for in-house baking expertise; simply bake or sell.",
+    },
+    {
+      title: "Healthy Options",
+      description:
+        "Sugar-free options that cater to growing market demand for better-for-you treats.",
+    },
+    {
+      title: "Innovative & Growing",
+      description:
+        "Constantly expanding with new flavors and health-conscious recipes.",
     },
   ];
 
@@ -111,7 +132,7 @@ const Home = () => {
                   className="home-btn home-btn-secondary"
                   onClick={() => handleNavigation("/contact")}
                 >
-                  Get in Touch
+                  Contact Us
                 </Link>
               </div>
             </div>
@@ -130,35 +151,26 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
-      <section className="home-mission-vision home-section">
+      {/* Excellence in Every Bite Section */}
+      <section className="home-excellence-section home-section">
         <div className="home-container">
           <div className="home-section-header">
-            <h2 className="home-section-title home-slide-in-left">Our Story</h2>
+            <h2 className="home-section-title home-slide-in-left">
+              Excellence in Every Bite
+            </h2>
             <div className="home-section-divider"></div>
           </div>
-          <div className="home-mission-vision-grid">
-            <div className="home-mission-card home-card home-slide-in-left">
-              <div className="home-card-icon">🎯</div>
-              <h3>Our Mission</h3>
-              <p>
-                To create exceptional baked goods that combine premium taste,
-                clean ingredients, and ultimate convenience, empowering our
-                clients to serve their customers with confidence, consistency,
-                and joy.
-              </p>
-              <div className="home-card-accent"></div>
-            </div>
-            <div className="home-vision-card home-card home-slide-in-right">
-              <div className="home-card-icon">🌟</div>
-              <h3>Our Vision</h3>
-              <p>
-                To be the leading clean-label bakery brand in the Middle East,
-                known for innovation, trust, and irresistible taste, serving
-                both B2B and B2C markets across the region and beyond.
-              </p>
-              <div className="home-card-accent"></div>
-            </div>
+          <div className="home-excellence-grid">
+            {brandHighlights.map((highlight, index) => (
+              <div key={index} className="home-excellence-item">
+                <div className="home-excellence-content">
+                  <h3 className="home-excellence-title">{highlight.title}</h3>
+                  <p className="home-excellence-description">
+                    {highlight.description}
+                  </p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -229,11 +241,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/whatsapp.png"
-                  alt="WhatsApp"
-                  className="home-social-icon"
-                />
+                <FaWhatsapp className="home-social-icon" />
                 <span className="home-social-tooltip">WhatsApp</span>
               </a>
               <a
@@ -242,11 +250,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/instagram.png"
-                  alt="Instagram"
-                  className="home-social-icon"
-                />
+                <FaInstagram className="home-social-icon" />
                 <span className="home-social-tooltip">Instagram</span>
               </a>
               <a
@@ -255,11 +259,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/tiktok.png"
-                  alt="TikTok"
-                  className="home-social-icon"
-                />
+                <FaTiktok className="home-social-icon" />
                 <span className="home-social-tooltip">TikTok</span>
               </a>
               <a
@@ -268,11 +268,7 @@ const Home = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <img
-                  src="/images/facebook.png"
-                  alt="Facebook"
-                  className="home-social-icon"
-                />
+                <FaFacebook className="home-social-icon" />
                 <span className="home-social-tooltip">Facebook</span>
               </a>
             </div>

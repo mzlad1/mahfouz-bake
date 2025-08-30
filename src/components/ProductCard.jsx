@@ -276,10 +276,6 @@ const ProductCard = ({ product }) => {
             {/* Product Info in Modal */}
             <div className="modal-product-info">
               <h3>{name}</h3>
-
-              <div className="modal-image-counter">
-                {currentImageIndex + 1} of {images.length} images
-              </div>
             </div>
           </div>
         </div>

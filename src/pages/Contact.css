@@ -13,11 +13,32 @@
 }
 
 /* Contact Content */
+.contact-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url("/images/logo.png") no-repeat center;
+  background-size: contain;
+  opacity: 0.1;
+  pointer-events: none;
+  z-index: 0;
+}
+
 .contact-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 60px;
   align-items: start;
+  position: relative;
+  z-index: 1;
 }
 
 /* Contact Form */
@@ -183,14 +204,14 @@
 }
 
 .contact-social-icon {
-  width: 45px;
-  height: 45px;
-  object-fit: contain;
+  width: 24px;
+  height: 24px;
+  color: var(--primary);
+  transition: all 0.3s ease;
 }
 
-.contact-social-text {
-  font-size: 0.85rem;
-  font-weight: 600;
+.contact-social-link:hover .contact-social-icon {
+  color: var(--white);
 }
 
 /* FAQ Section */
@@ -234,6 +255,10 @@
   .contact-faq-grid {
     grid-template-columns: 1fr;
   }
+
+  .contact-content::before {
+    background-size: 200px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -254,5 +279,9 @@
 
   .contact-faq-item {
     padding: 20px;
+  }
+
+  .contact-content::before {
+    background-size: 150px;
   }
 }

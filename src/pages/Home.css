@@ -366,8 +366,8 @@ body {
   }
 }
 
-/* Mission & Vision Section */
-.home-mission-vision {
+/* Excellence in Every Bite Section */
+.home-excellence-section {
   background: var(--light-gray);
   position: relative;
 }
@@ -432,18 +432,18 @@ body {
   }
 }
 
-.home-mission-vision-grid {
+.home-excellence-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.home-card {
+.home-excellence-item {
   background: var(--white);
-  padding: 40px;
-  border-radius: 20px;
+  padding: 30px;
+  border-radius: 15px;
   box-shadow: var(--shadow-soft);
   position: relative;
   transition: var(--transition-smooth);
@@ -451,43 +451,25 @@ body {
   border: 1px solid rgba(153, 122, 198, 0.1);
 }
 
-.home-card:hover {
-  transform: translateY(-10px);
+.home-excellence-item:hover {
+  transform: translateY(-5px);
   box-shadow: var(--shadow-hover);
 }
 
-.home-card-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-}
-
-.home-card h3 {
-  font-size: 1.5rem;
+.home-excellence-title {
+  color: var(--accent);
+  font-size: 1.3rem;
   font-weight: 700;
-  margin-bottom: 20px;
-  color: var(--primary);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
-.home-card p {
+.home-excellence-description {
   color: var(--gray);
-  line-height: 1.7;
-}
-
-.home-card-accent {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  background: var(--gradient-primary);
-  transform: scaleX(0);
-  transition: var(--transition-smooth);
-  transform-origin: left;
-}
-
-.home-card:hover .home-card-accent {
-  transform: scaleX(1);
+  line-height: 1.6;
+  margin: 0;
+  font-size: 1rem;
 }
 
 /* Products Preview Section */
@@ -680,6 +662,7 @@ body {
 .home-social-icon {
   width: 30px;
   height: 30px;
+  color: var(--primary);
   transition: var(--transition-smooth);
 }
 
@@ -850,13 +833,13 @@ body {
     font-size: 0.95rem;
   }
 
-  .home-mission-vision-grid {
+  .home-excellence-grid {
     grid-template-columns: 1fr;
-    gap: 30px;
+    gap: 25px;
   }
 
-  .home-card {
-    padding: 30px 20px;
+  .home-excellence-item {
+    padding: 25px 20px;
   }
 
   .home-social-links {
@@ -922,6 +905,10 @@ body {
   .home-social-icon {
     width: 25px;
     height: 25px;
+  }
+
+  .home-excellence-item {
+    padding: 20px 15px;
   }
 }
 

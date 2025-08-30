@@ -24,12 +24,6 @@
   padding: 30px 20px;
 }
 
-.clients-audience-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
-}
-
 .clients-audience-card h3 {
   color: var(--accent);
   font-size: 1.4rem;
@@ -75,12 +69,6 @@
 .clients-trust-card {
   text-align: center;
   padding: 30px 20px;
-}
-
-.clients-trust-icon {
-  font-size: 3rem;
-  margin-bottom: 20px;
-  display: block;
 }
 
 .clients-trust-card h3 {

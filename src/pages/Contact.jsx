@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import "./Contact.css";
 
 const Contact = () => {
@@ -150,13 +151,8 @@ const Contact = () => {
               <div className="contact-info-item">
                 <h3>Phone</h3>
                 <p>
-                  <a href="tel:+970593666676">0593 666 676</a>
+                  <a href="tel:+970593666676">+970 593 666 676</a>
                 </p>
-              </div>
-
-              <div className="contact-info-item">
-                <h3>Location</h3>
-                <p>Al Teereh, Ramallah, Palestine</p>
               </div>
 
               <div className="contact-info-item">
@@ -168,11 +164,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/images/whatsapp.png"
-                      alt="WhatsApp"
-                      className="contact-social-icon"
-                    />
+                    <FaWhatsapp className="contact-social-icon" />
                   </a>
                   <a
                     href="https://instagram.com/mahfouzbake"
@@ -180,11 +172,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/images/instagram.png"
-                      alt="Instagram"
-                      className="contact-social-icon"
-                    />
+                    <FaInstagram className="contact-social-icon" />
                   </a>
                   <a
                     href="https://tiktok.com/@mahfouzbake_"
@@ -192,11 +180,7 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/images/tiktok.png"
-                      alt="TikTok"
-                      className="contact-social-icon"
-                    />
+                    <FaTiktok className="contact-social-icon" />
                   </a>
                   <a
                     href="https://www.facebook.com/profile.php?id=61579324492276"
@@ -204,21 +188,9 @@ const Contact = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                   >
-                    <img
-                      src="/images/facebook.png"
-                      alt="Facebook"
-                      className="contact-social-icon"
-                    />
+                    <FaFacebook className="contact-social-icon" />
                   </a>
                 </div>
-              </div>
-
-              <div className="contact-info-item">
-                <h3>Business Hours</h3>
-                <ul>
-                  <li>Saturday - Thursday: 8:00 AM - 10:00 PM</li>
-                  <li>Friday: 12:00 PM - 10:00 PM</li>
-                </ul>
               </div>
 
               <div className="contact-info-item">
