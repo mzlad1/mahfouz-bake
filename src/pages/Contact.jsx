@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { useLoadingContext } from "../context/LoadingContext";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import "./Contact.css";
 
@@ -11,6 +13,21 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const { startLoading } = useLoadingContext();
+  const location = useLocation();
+
+  const handleNavigation = (path) => {
+    // Only trigger loading if navigating to a different page
+    if (location.pathname !== path) {
+      startLoading();
+      // Scroll to top when navigating to a new page - iOS compatible
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 100);
+    }
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;

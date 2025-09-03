@@ -6,6 +6,7 @@ import {
 } from "react-router-dom";
 import { useEffect, useRef } from "react";
 import { LoadingProvider, useLoadingContext } from "./context/LoadingContext";
+import useScrollToTop from "./hooks/useScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
@@ -21,6 +22,9 @@ function AppContent() {
   const { startLoading, stopLoading, startInitialLoading, stopInitialLoading } =
     useLoadingContext();
   const prevPathRef = useRef(location.pathname);
+
+  // Use scroll to top hook for iOS compatibility
+  useScrollToTop();
 
   // Initial loading when app first loads
   useEffect(() => {

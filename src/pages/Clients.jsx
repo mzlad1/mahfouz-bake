@@ -1,6 +1,24 @@
+import { Link, useLocation } from "react-router-dom";
+import { useLoadingContext } from "../context/LoadingContext";
 import "./Clients.css";
 
 const Clients = () => {
+  const { startLoading } = useLoadingContext();
+  const location = useLocation();
+
+  const handleNavigation = (path) => {
+    // Only trigger loading if navigating to a different page
+    if (location.pathname !== path) {
+      startLoading();
+      // Scroll to top when navigating to a new page - iOS compatible
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 100);
+    }
+  };
+
   const targetAudiences = [
     {
       category: "Coffee Shops & Cafés",
@@ -133,12 +151,20 @@ const Clients = () => {
               their premium baked goods needs.
             </p>
             <div className="clients-cta-buttons">
-              <a href="/contact" className="btn">
+              <Link
+                to="/contact"
+                className="btn"
+                onClick={() => handleNavigation("/contact")}
+              >
                 Get Started
-              </a>
-              <a href="/products" className="btn btn-secondary">
+              </Link>
+              <Link
+                to="/products"
+                className="btn btn-secondary"
+                onClick={() => handleNavigation("/products")}
+              >
                 View Products
-              </a>
+              </Link>
             </div>
           </div>
         </div>

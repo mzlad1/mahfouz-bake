@@ -11,8 +11,12 @@ const Footer = () => {
     // Only trigger loading if navigating to a different page
     if (location.pathname !== path) {
       startLoading();
-      // Scroll to top when navigating to a new page
-      window.scrollTo(0, 0);
+      // Scroll to top when navigating to a new page - iOS compatible
+      setTimeout(() => {
+        window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }, 100);
     }
   };
 
