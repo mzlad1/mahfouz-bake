@@ -10,6 +10,7 @@ import useScrollToTop from "./hooks/useScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Loading from "./components/Loading";
+import WhatsAppButton from "./components/WhatsAppButton";
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import About from "./pages/About";
@@ -69,6 +70,7 @@ function AppContent() {
         </Routes>
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }
