@@ -15,6 +15,7 @@ import Products from "./pages/Products";
 import About from "./pages/About";
 import Clients from "./pages/Clients";
 import Contact from "./pages/Contact";
+import FAQ from "./pages/FAQ";
 import "./App.css";
 
 function AppContent() {
@@ -64,6 +65,7 @@ function AppContent() {
           <Route path="/about" element={<About />} />
           <Route path="/clients" element={<Clients />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </main>
       <Footer />

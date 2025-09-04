@@ -134,6 +134,7 @@ label {
 
 .btn:hover {
   transform: translateY(-2px);
+  border: 1px solid var(--accent);
   box-shadow: 0 6px 20px rgba(76, 42, 119, 0.4);
 }
 

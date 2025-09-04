@@ -57,7 +57,7 @@ const Products = () => {
       id: 1,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Red velvet cookie11.jpg"],
-      name: "Red Velvet Cookie",
+      name: "Red Velvet Bliss",
       description:
         "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
     },
@@ -65,7 +65,7 @@ const Products = () => {
       id: 2,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Double cookie11.jpg"],
-      name: "Double Cookie",
+      name: "Color Pop Cookie",
       description:
         "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
     },
@@ -73,7 +73,7 @@ const Products = () => {
       id: 3,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Classic cookie11.jpg"],
-      name: "Classic Cookie",
+      name: "Classic Chocolate",
       description:
         "The perfect classic cookie with a golden brown exterior and soft, chewy center.",
     },
@@ -81,7 +81,7 @@ const Products = () => {
       id: 4,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Oats cookie11.jpg"],
-      name: "Oats Cookie",
+      name: "Oats Cranberry",
       description:
         "Wholesome oatmeal cookies with a hearty texture and natural sweetness.",
     },
@@ -89,7 +89,7 @@ const Products = () => {
       id: 5,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Sprinkles cookie11.jpg"],
-      name: "Sprinkles Cookie",
+      name: "Joyful Sprinkle",
       description:
         "Festive cookies loaded with colorful sprinkles, perfect for celebrations and parties.",
     },
@@ -97,7 +97,7 @@ const Products = () => {
       id: 6,
       category: "cookies",
       images: ["/images/products/WhiteBackground/Reeses cookie11.jpg"],
-      name: "Reeses Cookie",
+      name: "Reese's Dream",
       description:
         "Irresistible cookies featuring the perfect combination of peanut butter and chocolate.",
     },
@@ -105,7 +105,7 @@ const Products = () => {
       id: 7,
       category: "sugar-free-cookies",
       images: ["/images/products/WhiteBackground/cranberry11.jpg"],
-      name: "Sugar-Free Cranberry Cookie",
+      name: "Guilt Free Cranberry",
       description:
         "Delicious cranberry cookies without added sugar. Sweetened naturally with cranberries.",
     },
@@ -113,7 +113,7 @@ const Products = () => {
       id: 8,
       category: "sugar-free-cookies",
       images: ["/images/products/WhiteBackground/chocolate11.jpg"],
-      name: "Sugar-Free Chocolate Cookie",
+      name: "Guilt Free Chocolate",
       description:
         "Rich chocolate cookies without the sugar. Perfect for health-conscious chocolate lovers.",
     },
@@ -121,7 +121,7 @@ const Products = () => {
       id: 9,
       category: "fudge-brownies",
       images: ["/images/products/WhiteBackground/Fudge brownies22.jpg"],
-      name: "Fudge Brownies",
+      name: "Chocolate Fudge",
       description:
         "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
     },
@@ -129,7 +129,7 @@ const Products = () => {
       id: 10,
       category: "sugar-free-muffins",
       images: ["/images/products/WhiteBackground/carrot11.jpg"],
-      name: "Sugar-Free Carrot Muffins",
+      name: "Carrot & Walnuts",
       description:
         "Moist carrot muffins made with fresh carrots and natural sweeteners.",
     },
@@ -137,7 +137,7 @@ const Products = () => {
       id: 11,
       category: "sugar-free-muffins",
       images: ["/images/products/WhiteBackground/lemon11.jpg"],
-      name: "Sugar-Free Lemon Muffins",
+      name: "Lemon Poppy Seeds",
       description:
         "Refreshing lemon muffins with a bright citrus flavor and no added sugar.",
     },
@@ -145,9 +145,27 @@ const Products = () => {
       id: 12,
       category: "fudge-brownies",
       images: ["/images/products/WhiteBackground/Reeses Brownies11.jpg"],
-      name: "Reeses Brownies",
+      name: "Pistachio Crunch Brownie",
       description:
         "Decadent brownies loaded with Reeses peanut butter cups for the ultimate chocolate experience.",
+    },
+    //add peanut choco fusion
+    {
+      id: 13,
+      category: "fudge-brownies",
+      images: ["/images/products/WhiteBackground/Peanut choco.jpg"],
+      name: "Peanut Choco Fusion",
+      description:
+        "Delicious brownies loaded with peanut butter and chocolate for the ultimate chocolate experience.",
+    },
+    //add Choco Overload
+    {
+      id: 14,
+      category: "Cookies",
+      images: ["/images/products/WhiteBackground/Choco overload.jpg"],
+      name: "Choco Overload",
+      description:
+        "Delicious Cookies loaded with chocolate for the ultimate chocolate experience.",
     },
   ];
 
@@ -328,7 +346,7 @@ const Products = () => {
       {/* Product Features - OUR PRODUCT RANGE */}
       <section className="products-product-features section">
         <div className="container">
-          <h2 className="section-title">OUR PRODUCT RANGE</h2>
+          <h2 className="section-title">Why Choose Us?</h2>
           <div className="products-features-grid">
             {productBenefits.map((benefit, index) => (
               <div key={index} className="products-feature-card card">

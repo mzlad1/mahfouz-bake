@@ -31,7 +31,47 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Contact</h4>
+            <h4>Quick Links</h4>
+            <ul>
+              <li>
+                <Link
+                  to="/products"
+                  onClick={() => handleNavigation("/products")}
+                >
+                  Products
+                </Link>
+              </li>
+              <li>
+                <Link to="/about" onClick={() => handleNavigation("/about")}>
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/clients"
+                  onClick={() => handleNavigation("/clients")}
+                >
+                  For Businesses
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/contact"
+                  onClick={() => handleNavigation("/contact")}
+                >
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link to="/faq" onClick={() => handleNavigation("/faq")}>
+                  FAQ
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="footer-section">
+            <h4>Contact Us</h4>
             <p>Email: mahfouzbake1@outlook.com</p>
             <p>Phone: +970 593 666 676</p>
             <div className="footer-social-links">
@@ -71,43 +111,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-section">
-            <h4>Quick Links</h4>
-            <ul>
-              <li>
-                <Link
-                  to="/products"
-                  onClick={() => handleNavigation("/products")}
-                >
-                  Products
-                </Link>
-              </li>
-              <li>
-                <Link to="/about" onClick={() => handleNavigation("/about")}>
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/clients"
-                  onClick={() => handleNavigation("/clients")}
-                >
-                  For Businesses
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contact"
-                  onClick={() => handleNavigation("/contact")}
-                >
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div className="footer-section">
             <h4>About</h4>
-            <p>Established 2023</p>
             <p>
               Premium frozen cookie dough and ready-to-sell freshly baked
               cookies

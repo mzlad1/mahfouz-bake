@@ -92,6 +92,13 @@ const Navbar = () => {
           >
             Contact Us
           </Link>
+          <Link
+            to="/faq"
+            className={`nav-link ${isActive("/faq") ? "active" : ""}`}
+            onClick={() => handleNavigation("/faq")}
+          >
+            FAQ
+          </Link>
         </div>
 
         <div className="navbar-toggle" onClick={toggleMenu}>

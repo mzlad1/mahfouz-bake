@@ -153,14 +153,14 @@ const Clients = () => {
             <div className="clients-cta-buttons">
               <Link
                 to="/contact"
-                className="btn"
+                className="btn btn-secondary"
                 onClick={() => handleNavigation("/contact")}
               >
                 Get Started
               </Link>
               <Link
                 to="/products"
-                className="btn btn-secondary"
+                className="btn"
                 onClick={() => handleNavigation("/products")}
               >
                 View Products
