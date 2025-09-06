@@ -157,7 +157,7 @@ const Products = () => {
     //add peanut choco fusion
     {
       id: 13,
-      category: "Cookies",
+      category: "cookies",
       images: ["/images/products/WhiteBackground/Peanut choco.jpg"],
       name: "Peanut Choco Fusion",
       description:
@@ -166,7 +166,7 @@ const Products = () => {
     //add Choco Overload
     {
       id: 14,
-      category: "Cookies",
+      category: "cookies",
       images: ["/images/products/WhiteBackground/Choco overload.jpg"],
       name: "Choco Overload",
       description:
