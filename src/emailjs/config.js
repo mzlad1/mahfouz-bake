@@ -1,19 +1,19 @@
 // EmailJS Configuration
-// You'll need to replace these with your actual EmailJS credentials
+// Environment variables are loaded from .env file
 // Get these from https://www.emailjs.com/
 
 export const EMAILJS_CONFIG = {
   // Your EmailJS Service ID
-  SERVICE_ID: "service_78fljva",
+  SERVICE_ID: import.meta.env.VITE_EMAILJS_SERVICE_ID,
 
   // Your EmailJS Template ID
-  TEMPLATE_ID: "template_xsj8iyc",
+  TEMPLATE_ID: import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
 
   // Your EmailJS Public Key
-  PUBLIC_KEY: "KdeR9lODRehzdBkLT",
+  PUBLIC_KEY: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
 
   // Your Gmail address where emails will be sent
-  TO_EMAIL: "sinokrotsaseel@gmail.com",
+  TO_EMAIL: import.meta.env.VITE_EMAILJS_TO_EMAIL,
 };
 
 // EmailJS Template Variables

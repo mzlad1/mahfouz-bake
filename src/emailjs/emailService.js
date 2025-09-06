@@ -35,14 +35,16 @@ export const validateConfig = () => {
   const { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } = EMAILJS_CONFIG;
 
   if (
-    SERVICE_ID === "YOUR_SERVICE_ID" ||
-    TEMPLATE_ID === "YOUR_TEMPLATE_ID" ||
-    PUBLIC_KEY === "YOUR_PUBLIC_KEY"
+    !SERVICE_ID ||
+    !TEMPLATE_ID ||
+    !PUBLIC_KEY ||
+    SERVICE_ID === "undefined" ||
+    TEMPLATE_ID === "undefined" ||
+    PUBLIC_KEY === "undefined"
   ) {
     return {
       isValid: false,
-      message:
-        "Please configure your EmailJS credentials in src/emailjs/config.js",
+      message: "Please configure your EmailJS credentials in the .env file",
     };
   }
 
