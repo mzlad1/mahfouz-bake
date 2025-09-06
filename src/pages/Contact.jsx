@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+import { sendEmail, validateConfig } from "../emailjs/emailService";
 import "./Contact.css";
 
 const Contact = () => {
@@ -13,8 +14,17 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [configError, setConfigError] = useState(null);
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Check EmailJS configuration on component mount
+  useEffect(() => {
+    const configValidation = validateConfig();
+    if (!configValidation.isValid) {
+      setConfigError(configValidation.message);
+    }
+  }, []);
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page
@@ -43,14 +53,25 @@ const Contact = () => {
     setSubmitStatus(null);
 
     try {
-      // TODO: Integrate with Firebase Firestore
-      // For now, simulate form submission
-      await new Promise((resolve) => setTimeout(resolve, 1000));
+      // Check if EmailJS is properly configured
+      if (configError) {
+        setSubmitStatus("error");
+        return;
+      }
 
-      setSubmitStatus("success");
-      setFormData({ name: "", email: "", phone: "", message: "" });
+      // Send email using EmailJS
+      const result = await sendEmail(formData);
+
+      if (result.success) {
+        setSubmitStatus("success");
+        setFormData({ name: "", email: "", phone: "", message: "" });
+      } else {
+        setSubmitStatus("error");
+        console.error("Email sending failed:", result.error);
+      }
     } catch (error) {
       setSubmitStatus("error");
+      console.error("Form submission error:", error);
     } finally {
       setIsSubmitting(false);
     }
@@ -143,7 +164,13 @@ const Contact = () => {
                   </div>
                 )}
 
-                {submitStatus === "error" && (
+                {configError && (
+                  <div className="contact-error-message">
+                    <strong>Configuration Error:</strong> {configError}
+                  </div>
+                )}
+
+                {submitStatus === "error" && !configError && (
                   <div className="contact-error-message">
                     Sorry, there was an error sending your message. Please try
                     again.
@@ -219,43 +246,6 @@ const Contact = () => {
                   <li>Bulk pricing for partners</li>
                 </ul>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="contact-faq-section section">
-        <div className="container">
-          <h2 className="section-title">Frequently Asked Questions</h2>
-          <div className="contact-faq-grid">
-            <div className="contact-faq-item">
-              <h3>What are your minimum order quantities?</h3>
-              <p>
-                We offer flexible ordering options. For businesses, we recommend
-                starting with our sample packs to test quality and demand.
-              </p>
-            </div>
-            <div className="contact-faq-item">
-              <h3>Do you deliver to all areas?</h3>
-              <p>
-                We currently serve the greater region with our delivery network.
-                Contact us to confirm availability in your area.
-              </p>
-            </div>
-            <div className="contact-faq-item">
-              <h3>How long does frozen dough last?</h3>
-              <p>
-                Our frozen cookie dough has a shelf life of 6 months when stored
-                at the recommended temperature.
-              </p>
-            </div>
-            <div className="contact-faq-item">
-              <h3>Can you customize products for our business?</h3>
-              <p>
-                Yes! We work with partners to create custom flavors, sizes, and
-                packaging solutions.
-              </p>
             </div>
           </div>
         </div>
