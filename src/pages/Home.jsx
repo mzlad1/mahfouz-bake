@@ -48,24 +48,27 @@ const Home = () => {
   const featuredProducts = [
     {
       id: 1,
-      images: ["/images/products/WhiteBackground/Red velvet cookie11.jpg"],
-      name: "Red Velvet Cookie",
+      category: "cookies",
+      images: ["/images/products/WhiteBackground/Classic cookie11.jpg"],
+      name: "Classic Chocolate",
       description:
-        "Delicious red velvet cookies with a rich, velvety texture and subtle cocoa flavor.",
+        "The perfect classic cookie with a golden brown exterior and soft, chewy center.",
     },
     {
       id: 2,
-      images: ["/images/products/WhiteBackground/Double cookie11.jpg"],
-      name: "Double Cookie",
+      category: "fudge-brownies",
+      images: ["/images/products/WhiteBackground/Fudge brownies22.jpg"],
+      name: "Chocolate Fudge",
       description:
-        "Double the chocolate, double the deliciousness. Rich and indulgent chocolate cookies.",
+        "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
     },
     {
       id: 3,
-      images: ["/images/products/WhiteBackground/Fudge brownies22.jpg"],
-      name: "Fudge Brownies",
+      category: "sugar-free-muffins",
+      images: ["/images/products/WhiteBackground/lemon11.jpg"],
+      name: "Lemon Poppy Seeds",
       description:
-        "Rich, fudgy brownies made with premium chocolate and clean ingredients.",
+        "Refreshing lemon muffins with a bright citrus flavor and no added sugar.",
     },
   ];
 

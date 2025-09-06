@@ -109,15 +109,6 @@ const Footer = () => {
               </a>
             </div>
           </div>
-
-          <div className="footer-section">
-            <h4>About</h4>
-            <p>
-              Premium frozen cookie dough and ready-to-sell freshly baked
-              cookies
-            </p>
-            <p>Clean-label ingredients, no preservatives</p>
-          </div>
         </div>
 
         <div className="footer-bottom">
