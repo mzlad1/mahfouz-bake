@@ -22,7 +22,6 @@ export const sendEmail = async (formData) => {
       templateParams
     );
 
-    console.log("Email sent successfully:", response);
     return { success: true, response };
   } catch (error) {
     console.error("Error sending email:", error);

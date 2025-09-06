@@ -8,7 +8,6 @@ const Loading = () => {
   const [animate, setAnimate] = useState(false);
 
   useEffect(() => {
-    console.log("Loading state changed:", { isLoading, isInitialLoading });
 
     if (isLoading || isInitialLoading) {
       setShow(true);
@@ -16,7 +15,6 @@ const Loading = () => {
 
       // Safety timeout to prevent loading from getting stuck
       const safetyTimer = setTimeout(() => {
-        console.log("Safety timeout triggered - forcing loading to stop");
         if (isLoading || isInitialLoading) {
           setAnimate(false);
           setTimeout(() => setShow(false), 500);
