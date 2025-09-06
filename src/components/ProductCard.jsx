@@ -157,7 +157,9 @@ const ProductCard = ({ product }) => {
         <div className="product-image">
           <img
             src={images[currentImageIndex]}
-            alt={`${name} - Image ${currentImageIndex + 1}`}
+            alt={`${name} - Premium baked goods by Mahfouz Bake - Image ${
+              currentImageIndex + 1
+            }`}
             onClick={openModal}
             className="clickable-image"
             loading="lazy"
@@ -244,7 +246,9 @@ const ProductCard = ({ product }) => {
               {/* Actual Image */}
               <img
                 src={images[currentImageIndex]}
-                alt={`${name} - Image ${currentImageIndex + 1}`}
+                alt={`${name} - Premium baked goods by Mahfouz Bake - Image ${
+                  currentImageIndex + 1
+                }`}
                 className={`modal-image ${
                   isModalImageLoading ? "hidden" : "visible"
                 }`}

@@ -1,12 +1,17 @@
 import { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
+import StructuredData from "../components/StructuredData";
+import useSEO from "../hooks/useSEO";
 import "./FAQ.css";
 
 const FAQ = () => {
   const [openFAQ, setOpenFAQ] = useState(null);
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for FAQ page
+  useSEO("faq");
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page
@@ -89,8 +94,24 @@ const FAQ = () => {
     },
   ];
 
+  // Generate FAQ structured data
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqData.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer,
+      },
+    })),
+  };
+
   return (
     <div className="faq-page">
+      <StructuredData data={faqStructuredData} />
+
       {/* Hero Section */}
       <section className="faq-hero section">
         <div className="container">

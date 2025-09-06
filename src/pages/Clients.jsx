@@ -1,10 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
+import useSEO from "../hooks/useSEO";
 import "./Clients.css";
 
 const Clients = () => {
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for clients page
+  useSEO("clients");
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page

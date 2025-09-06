@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
 import { sendEmail, validateConfig } from "../emailjs/emailService";
+import useSEO from "../hooks/useSEO";
 import "./Contact.css";
 
 const Contact = () => {
@@ -17,6 +18,9 @@ const Contact = () => {
   const [configError, setConfigError] = useState(null);
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for contact page
+  useSEO("contact");
 
   // Check EmailJS configuration on component mount
   useEffect(() => {

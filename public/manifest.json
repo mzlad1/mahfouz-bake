@@ -1,0 +1,27 @@
+{
+  "name": "Mahfouz Bake - Excellence in Every Bite",
+  "short_name": "Mahfouz Bake",
+  "description": "Premium frozen cookie dough and freshly baked goods for businesses and individuals. Clean-label ingredients, consistent quality.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4c2a77",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/images/logo.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/images/logo.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["food", "business", "shopping"],
+  "lang": "en",
+  "dir": "ltr"
+}

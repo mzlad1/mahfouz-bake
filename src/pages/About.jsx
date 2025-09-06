@@ -1,10 +1,14 @@
 import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
+import useSEO from "../hooks/useSEO";
 import "./About.css";
 
 const About = () => {
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for about page
+  useSEO("about");
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page
@@ -60,15 +64,18 @@ const About = () => {
               <h2>Our Story</h2>
               <p>
                 At Mahfouz Bake, we believe cookies should be more than just a
-                sweet treat — they should be a moment ofjoy, a bite ofcomfort,
-                anda standard ofquality that never compromises on ingredients
-                ortaste.
+                sweet treat — they should be a moment of joy, a bite of comfort,
+                and a standard of quality that never compromises on ingredients
+                or taste. Founded in 2023, we've been dedicated to bringing
+                premium baked goods to businesses and individuals across the
+                region.
               </p>
               <p>
-                Founded with a passion for clean-labelbaking, we specialize in
-                premium frozen cookie dough and ready-to-sellfreshlybaked
+                Founded with a passion for clean-label baking, we specialize in
+                premium frozen cookie dough and ready-to-sell freshly baked
                 cookies that combine convenience, consistency, and unforgettable
-                flavor
+                flavor. Our commitment to using only natural ingredients and
+                avoiding preservatives sets us apart in the bakery industry.
               </p>
             </div>
             <div className="about-story-image">

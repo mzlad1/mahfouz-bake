@@ -3,11 +3,15 @@ import { useState, useEffect } from "react";
 import { useLoadingContext } from "../context/LoadingContext";
 import ProductCard from "../components/ProductCard";
 import { FaWhatsapp, FaInstagram, FaTiktok, FaFacebook } from "react-icons/fa";
+import useSEO from "../hooks/useSEO";
 import "./Home.css";
 
 const Home = () => {
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for home page
+  useSEO("home");
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page
@@ -123,7 +127,9 @@ const Home = () => {
               </h1>
               <p className="home-hero-subtitle home-fade-in-up">
                 Premium frozen cookie dough and freshly baked goods for
-                businesses and individuals who demand the best.
+                businesses and individuals who demand the best. Clean-label
+                ingredients, no preservatives, and consistent quality since
+                2023.
               </p>
               <div className="home-hero-buttons home-fade-in-up">
                 <Link

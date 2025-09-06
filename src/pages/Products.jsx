@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useLoadingContext } from "../context/LoadingContext";
 import ProductCard from "../components/ProductCard";
+import StructuredData from "../components/StructuredData";
+import useSEO from "../hooks/useSEO";
 import "./Products.css";
 
 const Products = () => {
@@ -10,6 +12,9 @@ const Products = () => {
   const [itemsPerPage, setItemsPerPage] = useState(3);
   const { startLoading } = useLoadingContext();
   const location = useLocation();
+
+  // Apply SEO for products page
+  useSEO("products");
 
   const handleNavigation = (path) => {
     // Only trigger loading if navigating to a different page
@@ -202,8 +207,41 @@ const Products = () => {
     setCurrentPage(1); // Reset to first page
   };
 
+  // Generate structured data for products
+  const productStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Mahfouz Bake Products",
+    description:
+      "Premium frozen cookie dough and baked goods for businesses and individuals",
+    url: "https://mahfouzbake.com/products",
+    numberOfItems: products.length,
+    itemListElement: products.map((product, index) => ({
+      "@type": "Product",
+      position: index + 1,
+      name: product.name,
+      description: product.description,
+      image: `https://mahfouzbake.com${product.images[0]}`,
+      category: product.category,
+      brand: {
+        "@type": "Brand",
+        name: "Mahfouz Bake",
+      },
+      offers: {
+        "@type": "Offer",
+        availability: "https://schema.org/InStock",
+        seller: {
+          "@type": "Organization",
+          name: "Mahfouz Bake",
+        },
+      },
+    })),
+  };
+
   return (
     <div className="products-page">
+      <StructuredData data={productStructuredData} />
+
       {/* Hero Section */}
       <section className="products-hero section">
         <div className="container">
